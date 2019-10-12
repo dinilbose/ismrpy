@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+ismrpy/__init__.py
+ismrpy/main.py
+ismrpy.egg-info/PKG-INFO
+ismrpy.egg-info/SOURCES.txt
+ismrpy.egg-info/dependency_links.txt
+ismrpy.egg-info/requires.txt
+ismrpy.egg-info/top_level.txt
