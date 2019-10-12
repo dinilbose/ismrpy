@@ -8,7 +8,7 @@ setup(
   author = 'Dinil Bose P',                   # Type in your name
   author_email = 'dinilbose@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/dinilbose/ismrpy',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/dinilbose/ismrpy/archive/0.1.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/dinilbose/ismrpy/archive/v0.1-beta.tar.gz',    # I explain this later on
   keywords = ['ismr', 'pandas'],   # Keywords that define your package best
   install_requires=[            # I get to this in a second
           'numpy',
