@@ -4,7 +4,7 @@ from setuptools import setup
 setup(
   name = 'ismrpy',         # How you named your package folder (MyLib)
   packages = ['ismrpy'],   # Chose the same as "name"
-  version = '0.2.5',      # Start with a small number and increase it with every change you make
+  version = '0.2.6',      # Start with a small number and increase it with every change you make
   license='gpl-3.0',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'Reads ismr files and provides pandas data frame',   # Give a short description about your library
   author = 'Dinil Bose P',                   # Type in your name
