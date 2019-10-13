@@ -1,6 +1,6 @@
 # ismrpy
 
-Reads ismr and provide with panda data frame
+Reads ismr files and provides with panda data frame
 
 ## Getting Started
 ### Prerequisites
@@ -27,7 +27,8 @@ If provided with lat and lon, program  Calculate Ionospheric pierce points and S
     lat= latitude of station
     lon=longitude of station
     IPP=Height of ionospheric layer in kilometers (default 350 KM)
-
+    skiprows=Number of rows to be skipped(default None)
+    
 To read general ismr file
     
     '''
