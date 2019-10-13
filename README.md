@@ -58,4 +58,4 @@ See also the list of [contributors](https://github.com/dinilbose/ismrpy/contribu
 
 ## License
 
-This project is licensed under the GPL-3 License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GPL-3 License - see the [LICENSE.md](LICENSE.txt) file for details
