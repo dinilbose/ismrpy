@@ -13,7 +13,7 @@ def read_ismr(filename='', lat='', lon='', addition=True, Ipp=350, skiprows=None
         IPP=Height of ionospheric layer in kilometers (default 350 KM)
     """
     data = pd.read_csv(filename, names=ismr_column, parse_dates=[['GPS_Week_Number', 'GPS_Time_Week']],
-                       date_parser=__weeksecondstoutc,skiprows=skiprows)
+                       date_parser=__weeksecondstoutc, skiprows=skiprows)
     data = data.rename(columns={'GPS_Week_Number_GPS_Time_Week': 'Time'})
     data = data.set_index(['Time'])
     data['sv'] = data.SVID.apply(__navigation)
