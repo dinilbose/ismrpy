@@ -1,6 +1,10 @@
 #from distutils.core import setup
 from setuptools import setup
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+
 setup(
   name = 'ismrpy',         # How you named your package folder (MyLib)
   packages = ['ismrpy'],   # Chose the same as "name"
@@ -11,7 +15,9 @@ setup(
   author_email = 'dinilbose@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/dinilbose/ismrpy',   # Provide either the link to your github or to your website
   download_url = 'https://github.com/dinilbose/ismrpy/archive/v0.1-beta.tar.gz',    # I explain this later on
-  keywords = ['ismr', 'pandas'],   # Keywords that define your package best
+  keywords = ['ismr', 'pandas']# Keywords that define your package best
+  long_description=long_description,
+  long_description_content_type="text/markdown",
   classifiers=[
     'Development Status :: 4 - Beta',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
     'Intended Audience :: Science/Research',      # Define that your audience are developers
@@ -22,5 +28,6 @@ setup(
     'Programming Language :: Python :: 3.5',
     'Programming Language :: Python :: 3.6',
   ], install_requires=['pandas>=0.13.1'],setup_requires=["numpy","pandas"],
+
 
 )
