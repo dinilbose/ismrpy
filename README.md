@@ -1,6 +1,6 @@
 # ismrpy
 
-Reads ismr and provide with panda data frame
+Reads ismr files and provides with panda data frame
 
 ## Getting Started
 ### Prerequisites
