@@ -15,7 +15,7 @@ setup(
   author_email = 'dinilbose@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/dinilbose/ismrpy',   # Provide either the link to your github or to your website
   download_url = 'https://github.com/dinilbose/ismrpy/archive/v0.1-beta.tar.gz',    # I explain this later on
-  keywords = ['ismr', 'pandas']# Keywords that define your package best
+  keywords = ['ismr', 'pandas'], # Keywords that define your package best
   long_description=long_description,
   long_description_content_type="text/markdown",
   classifiers=[
