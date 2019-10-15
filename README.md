@@ -39,10 +39,10 @@ data=ismrpy.read_ismr(filename=Name_of_file)
 
 To read specific files with header and with extra number of columns:
 
-ismrpy.ismr_columns provides the column names, if there is an extra column in ismr (usually from ismr files from LISN networks has filename as extra column) add extra column using following command
+ismrpy.ismr_column provides the column names, if there is an extra column in ismr (usually from ismr files from LISN networks has filename as extra column) add extra column using following command
         
 ```
-ismrpy.ismr_columns.append('Name of the column')
+ismrpy.ismr_column.append('Name of the column')
 ```
     
 To skip the first line of the file use skiprows=1
