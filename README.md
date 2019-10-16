@@ -11,7 +11,7 @@ pip install numpy
 pip install pandas
 ```
 
-### Installing
+### Installation
 
 ```
 pip install ismrpy
