@@ -1,6 +1,7 @@
 # The module helps to read basic ismr file and convert it into panda dataframe for quick and easy analysis
 import pandas as pd
 import numpy as np
+import sys
 
 
 def read_ismr(filename='', lat='', lon='', addition=True, Ipp=350, skiprows=None):
@@ -17,7 +18,12 @@ def read_ismr(filename='', lat='', lon='', addition=True, Ipp=350, skiprows=None
     data = data.rename(columns={'GPS_Week_Number_GPS_Time_Week': 'Time'})
     data = data.set_index(['Time'])
     data['sv'] = data.SVID.apply(__navigation)
-    data = data.convert_objects(convert_numeric=True)
+    major=sys.version_info[0]
+    minor=sys.version_info[1]*0.1
+    if major+minor>3:
+        data = data.infer_objects()
+    else:
+        data = data.convert_objects(convert_numeric=True)
     if not lat == '' and not lon == '':
         PHI = lat  # Values needed for Chaganassery
         LAMBDA = lon
