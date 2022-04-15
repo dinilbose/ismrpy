@@ -4,7 +4,7 @@ import numpy as np
 import sys
 
 
-def read_ismr(filename='', lat='', lon='', addition=True, Ipp=350, skiprows=None):
+def read_ismr(filename='', lat='', lon='', columns=None,addition=True, Ipp=350, skiprows=None,dtype=None):
     """"
     Reads ismr and provide with panda data frame
         filename= Name of the file
@@ -13,8 +13,12 @@ def read_ismr(filename='', lat='', lon='', addition=True, Ipp=350, skiprows=None
         lon=longitude of station
         IPP=Height of ionospheric layer in kilometers (default 350 KM)
     """
+    if type(columns)!=type(None):
+        ismr_column=columns
+    
+    
     data = pd.read_csv(filename, names=ismr_column, parse_dates=[['GPS_Week_Number', 'GPS_Time_Week']],
-                       date_parser=__weeksecondstoutc, skiprows=skiprows)
+                       date_parser=__weeksecondstoutc, skiprows=skiprows,dtype=dtype)
     data = data.rename(columns={'GPS_Week_Number_GPS_Time_Week': 'Time'})
     data = data.set_index(['Time'])
     data['sv'] = data.SVID.apply(__navigation)
@@ -59,6 +63,7 @@ def read_ismr(filename='', lat='', lon='', addition=True, Ipp=350, skiprows=None
         data['Dlat_IPP'] = DLat_PP
         data['Dlong_IPP'] = DLong_PP
     return data
+
 
 
 def __weeksecondstoutc(gpsweek, gpsseconds):
